@@ -36,7 +36,16 @@ class ViewController: UIViewController {
 		super.viewWillTransition(to: size, with: coordinator)
 		self.view.layoutIfNeeded()
 		coordinator.animate(alongsideTransition: { _ in
-			self.drawingLayer.animGroupDuration = coordinator.transitionDuration
+
+			let lay = self.drawingLayer
+			let cur = lay!.midX
+			let val: CGFloat = lay!.bounds.midX
+			lay?.midX = val
+			let ba = CABasicAnimation(keyPath: #keyPath(DrawingLayer.midX))
+			ba.fromValue = cur
+			lay?.add(ba, forKey: nil)
+
+//			self.drawingLayer.animGroupDuration = coordinator.transitionDuration
 			self.toggleContainerSize()
 			self.view.layoutIfNeeded()
 		}, completion: nil)
