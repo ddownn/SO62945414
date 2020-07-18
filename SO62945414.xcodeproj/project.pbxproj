@@ -13,6 +13,8 @@
 		7DDDFE7C24C1E7F30076C326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DDDFE7A24C1E7F30076C326 /* Main.storyboard */; };
 		7DDDFE7E24C1E7F50076C326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DDDFE7D24C1E7F50076C326 /* Assets.xcassets */; };
 		7DDDFE8124C1E7F50076C326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DDDFE7F24C1E7F50076C326 /* LaunchScreen.storyboard */; };
+		7DDDFE8924C1EA2E0076C326 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDDFE8824C1EA2E0076C326 /* ContainerView.swift */; };
+		7DDDFE8B24C245050076C326 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDDFE8A24C245050076C326 /* DrawingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7DDDFE7D24C1E7F50076C326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DDDFE8024C1E7F50076C326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DDDFE8224C1E7F50076C326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DDDFE8824C1EA2E0076C326 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		7DDDFE8A24C245050076C326 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				7DDDFE7424C1E7F30076C326 /* AppDelegate.swift */,
 				7DDDFE7624C1E7F30076C326 /* SceneDelegate.swift */,
 				7DDDFE7824C1E7F30076C326 /* ViewController.swift */,
+				7DDDFE8824C1EA2E0076C326 /* ContainerView.swift */,
+				7DDDFE8A24C245050076C326 /* DrawingView.swift */,
 				7DDDFE7A24C1E7F30076C326 /* Main.storyboard */,
 				7DDDFE7D24C1E7F50076C326 /* Assets.xcassets */,
 				7DDDFE7F24C1E7F50076C326 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DDDFE8924C1EA2E0076C326 /* ContainerView.swift in Sources */,
+				7DDDFE8B24C245050076C326 /* DrawingView.swift in Sources */,
 				7DDDFE7924C1E7F30076C326 /* ViewController.swift in Sources */,
 				7DDDFE7524C1E7F30076C326 /* AppDelegate.swift in Sources */,
 				7DDDFE7724C1E7F30076C326 /* SceneDelegate.swift in Sources */,
