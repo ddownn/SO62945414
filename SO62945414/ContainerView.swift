@@ -19,14 +19,18 @@ class ContainerView: UIView {
 		self.drawingView.translatesAutoresizingMaskIntoConstraints = false
 		self.drawingView.backgroundColor = UIColor.green
 		self.addSubview(drawingView)
-		self.updateSubviewConstraints()
+		self.addSubviewConstraints()
 	}
 
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 	}
 
-	func updateSubviewConstraints() {
+	override func layoutSubviews() {
+		super.layoutSubviews()
+	}
+
+	func addSubviewConstraints() {
 		self.drawingView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 		self.drawingView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
 		self.drawingView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true

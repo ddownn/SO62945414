@@ -12,6 +12,29 @@ extension CGRect {
 	var center: CGPoint {
 		return CGPoint(x: self.midX, y: self.midY)
 	}
+	func printRoundedVals(_ pre: String = "") {
+		let x = round(self.minX)
+		let y = round(self.minY)
+		let w = round(self.width)
+		let h = round(self.height)
+		print("\(pre) (x:\(x), y:\(y), width:\(w), height:\(h))")
+	}
+}
+
+extension CGPoint {
+	func printRoundedVals(_ pre: String = "") {
+		let x = round(self.x)
+		let y = round(self.y)
+		print("\(pre) (x:\(x), y:\(y))")
+	}
+}
+
+extension CGSize {
+	func printRoundedVals(_ pre: String = "") {
+		let w = round(self.width)
+		let h = round(self.height)
+		print("\(pre) (width:\(w), height:\(h))")
+	}
 }
 
 class ViewController: UIViewController {
@@ -49,12 +72,15 @@ class ViewController: UIViewController {
 
 			let oldColor = lay.shapeFillColor
 			let newColor: CGColor = self.useLargeContainer ? lay.largeFillColor : lay.smallFillColor
-			
 			lay.shapeFillColor = newColor
 
 			let ba = CABasicAnimation(keyPath: #keyPath(DrawingLayer.shapeFillColor))
 			ba.fromValue = oldColor
 			lay.add(ba, forKey: nil)
+
+			let dummy = CABasicAnimation(keyPath: #keyPath(ShapeLayer.dummy))
+			dummy.fromValue = 1
+			lay.shape?.add(dummy, forKey: nil)
 
 			self.toggleContainerSize()
 			self.view.layoutIfNeeded()
