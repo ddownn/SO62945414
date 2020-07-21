@@ -15,6 +15,7 @@ class ContainerView: UIView {
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 
+		self.drawingView.contentScaleFactor = UIScreen.main.scale
 		self.drawingView.translatesAutoresizingMaskIntoConstraints = false
 		self.drawingView.backgroundColor = UIColor.green
 		self.addSubview(drawingView)
